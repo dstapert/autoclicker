@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - AutoPress</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-brand">
+            <a href="/autoclicker/index.html">AutoPress</a>
+        </div>
+        <div class="topbar-links">
+            <a href="/autoclicker/index.html">Download</a>
+            <a href="/autoclicker/help.html">Help</a>
+        </div>
+    </div>
+    <main class="main">
+        <p>Macro Commands:</p>
+        <button type="button" class="collapsible">Left Mouse</button>
+        <div class="content">
+            <p>
+                <b>Command: LEFTMOUSE interval X Y<br>
+                Example: &nbsp;&nbsp;LEFTMOUSE 100 1400 475</b><br>
+                Explanation: This command plays a left mouse button<br><br>
+
+                <b>interval</b> - How long the key is held down in milliseconds (Optional)<br>
+                <b>X</b> - The X coordinate (Optional)<br>
+                <b>Y</b> - The Y coordinate (Optional)<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Middle Mouse</button>
+        <div class="content">
+            <p>
+                <b>Command: MIDDLEMOUSE interval X Y<br>
+                Example: &nbsp;&nbsp;MIDDLEMOUSE 100 1400 475</b><br>
+                Explanation: This command plays a middle mouse button<br><br>
+
+                <b>interval</b> - How long the key is held down in milliseconds (Optional)<br>
+                <b>X</b> - The X coordinate (Optional)<br>
+                <b>Y</b> - The Y coordinate (Optional)<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Right Mouse</button>
+        <div class="content">
+            <p>
+                <b>Command: RIGHTMOUSE interval X Y<br>
+                Example: &nbsp;&nbsp;RIGHTMOUSE 100 1400 475</b><br>
+                Explanation: This command plays a right mouse button<br><br>
+
+                <b>interval</b> - How long the key is held down in milliseconds (Optional)<br>
+                <b>X</b> - The X coordinate (Optional)<br>
+                <b>Y</b> - The Y coordinate (Optional)<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Keyboard</button>
+        <div class="content">
+            <p>
+                <b>Command: KEYBOARD key interval<br>
+                Example: &nbsp;&nbsp;KEYBOARD E 60</b><br>
+                Explanation: This command plays a keyboard key<br><br>
+
+                <b>key</b> - The keyboard key<br>
+                <b>interval</b> - How long the key is held down in milliseconds (Optional)<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Modifier</button>
+        <div class="content">
+            <p>
+                <b>Command: MODIFIER modKey key<br>
+                Example: &nbsp;&nbsp;MODIFIER LCONTROL A</b><br>
+                Explanation: This command plays a modifier keyboard key<br><br>
+
+                <b>modKey</b> - The modifier key (Shift, Control, Alt)<br>
+                <b>key</b> - The keyboard key<br>
+                
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Wait</button>
+        <div class="content">
+            <p>
+                <b>Command: WAIT interval<br>
+                Example: &nbsp;&nbsp;WAIT 500</b><br>
+                Explanation: This command will wait the specified interval and then resume running the macro<br><br>
+
+                <b>interval</b> - How long the macro will wait in milliseconds<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Move</button>
+        <div class="content">
+            <p>
+                <b>Command: MOVE X Y<br>
+                Example: &nbsp;&nbsp;MOVE 1400 475</b><br>
+                Explanation: This command moves the cursor to the specified coordinate position<br><br>
+
+                <b>X</b> - The X coordinate<br>
+                <b>Y</b> - The Y coordinate<br><br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Loop / End</button>
+        <div class="content">
+            <p>
+                <b>Command: LOOP amt<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;## Commands you want to loop go in here<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;END<br>
+                Example: &nbsp;&nbsp;LOOP 10<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;LEFTCLICK 100 500 470<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYBOARD E 100<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;END<br>
+                Explanation: This command loops through the commands between loop and end based on the amt given<br><br>
+
+                <b>amt</b> - The amount of times the commands loop<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Write</button>
+        <div class="content">
+            <p>
+                <b>Command: WRITE string<br>
+                Example: &nbsp;&nbsp;WRITE this is a message</b><br>
+                Explanation: This command writes text out<br><br>
+
+                <b>string</b> - Any kind of text<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">Vscroll / Hscroll</button>
+        <div class="content">
+            <p>
+                <b>Command: VSCROLL / HSCROLL num<br>
+                Example: &nbsp;&nbsp;VSCROLL 1<br>
+                Example: &nbsp;&nbsp;HSCROLL -5</b><br>
+                Explanation: This command performs a scroll vertically with VSCROLL or horizontally with HSCROLL<br><br>
+
+                <b>num</b> - The amount of scrolls, 1 or -1 will scroll in each direction one notch<br>
+            </p>
+        </div>
+
+    </main>
+    <script src="help.js"></script>
+</body>
+</html>
