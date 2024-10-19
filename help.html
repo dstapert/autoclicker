@@ -105,19 +105,40 @@
             </p>
         </div>
 
-        <button type="button" class="collapsible">Loop / End</button>
+        <button type="button" class="collapsible">Loop / Endloop</button>
         <div class="content">
             <p>
                 <b>Command: LOOP amt<br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;## Commands you want to loop go in here<br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;END<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;## Commands you want to loop go in here<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;ENDLOOP<br>
                 Example: &nbsp;&nbsp;LOOP 10<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;LEFTCLICK 100 500 470<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KEYBOARD E 100<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;END<br>
-                Explanation: This command loops through the commands between loop and end based on the amt given<br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;LEFTCLICK 100 500 470<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;KEYBOARD E 100<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;ENDLOOP</b><br>
+                Explanation: This command loops through the commands between loop and endloop based on the amt given<br><br>
 
                 <b>amt</b> - The amount of times the commands loop<br>
+            </p>
+        </div>
+
+        <button type="button" class="collapsible">If / Endif</button>
+        <div class="content">
+            <p>
+                <b>Command: if color/window #f1f1f1/13595<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;## Commands you want to use if true go in here<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;ENDIF<br>
+                Example: &nbsp;&nbsp;IF WINDOW 11124<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;LEFTCLICK 100 500 470<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;ENDIF<br>
+
+                Example: &nbsp;&nbsp;IF COLOR #f1f1f1<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;LEFTCLICK 100 500 470<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;ENDIF</b><br>
+                Explanation: This command checks if the statement is true, if it is, plays commands inside the if<br><br>
+
+                <b>condition</b> - condition to check for, currently just color/window <br>
+                <b>value</b> - the value of the processId for the window or hex color for color<br><br>
+                <b>NOTE</b> - you can get ProcessId from the filter input box on main page or task manager in details.<br> Color you'll have to use something else to get hex codes.<br>
             </p>
         </div>
 
