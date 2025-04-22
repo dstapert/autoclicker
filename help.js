@@ -14,7 +14,6 @@ for (i = 0; i < coll.length; i++) {
         content.style.display = "block";
       }
     }else{
-      console.log("bruh",this)
     }
     
   });
