@@ -6,15 +6,97 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-}
+  }
 
-h1 {
+  h1 {
     text-align: center;
     color: #333;
-}
+    margin-top: 80px;
+  }
 
-.download-section {
+  .topbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 14px 20px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .topbar-brand a {
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
+  .topbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+  }
+
+  .topbar-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+
+  .main {
+    margin-top: 100px;
+    padding: 10px;
+    overflow-y: auto;
+    max-width: 800px;
+    width: 100%;
+    height: calc(100vh - 100px);
+  }
+
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    margin: 10px 0;
+  }
+
+  .collapsible + .content {
+    padding-bottom: 1em;
+  }
+  .collapsible + .content .content {
+    padding-bottom: 0; /* child collapsible content gets no extra */
+  }
+
+/* Download Page */
+  .download-section {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,72 +117,5 @@ h1 {
 }
 
 .download-button:hover {
-    background-color: #45a049;
+    background-color: #45A049;
 }
-
-.topbar {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 14px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.topbar-brand a {
-    padding-left: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-.topbar-links a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    transition: background-color 0.3s;
-}
-
-.topbar-links a:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
-
-/* Collapsible Content */
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-  }
-
-  .main{
-    margin-top: 60px;
-    padding: 10px;
-    overflow-y: auto;
-    height: calc(100vh - 60px);
-  }
