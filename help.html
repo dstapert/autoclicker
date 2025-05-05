@@ -18,6 +18,16 @@
     </div>
     <main class="main">
         <p>Macro Commands:</p>
+
+        <button type="button" class="collapsible">Basic Information</button>
+            <div class="content">
+                <p>
+                    <b>IMPORTANT NOTE:</b> If a game isn't registering inputs, check the hold interval, it may be too quick that the game doesn't even register it.<br>
+                    <b>(Optional):</b> When something is optional, it defaults to 0, so if you need to fill in an argument, put in 0, otherwise you can leave it blank.<br>
+                    <b>Coordinates:</b> If coordinates are set to 0,0 or blank, they will default to mouse cursor.<br>
+                    <b>Interval:</b> Most intervals default to 10ms if less than 10ms. (Computers only register something around 15-20ms)<br>
+                </p>
+            </div>
         <!-- MOUSE COMMANDS -->
         <button class="collapsible">Mouse Commands</button>
         <div class="content">
@@ -48,6 +58,8 @@
                     </ul>
                 </p>
             </div>
+
+            
 
             <button type="button" class="collapsible">Move</button>
             <div class="content">
@@ -92,6 +104,24 @@
                     </ul>
                 </p>
             </div>
+
+            <button type="button" class="collapsible">Random Mouse</button>
+            <div class="content">
+                <p>
+                    <b>Command:</b> RANDOMMOUSE button lowMs highMs clickCount X Y<br>
+                    <b>Example:</b> RANDOMMOUSE left 100 300 1 1400 475<br>
+                    <b>Explanation:</b> Plays a mouse button click with a random hold interval between lowMs and highMs<br><br>
+
+                    <b>Details:</b>
+                    <ul>
+                        <li><b>button:</b> The mouse button (left, right, middle)</li>
+                        <li><b>interval:</b> Duration the button is held down (Optional)</li>
+                        <li><b>clickCount:</b> Amount of clicks performed per action (Optional)</li>
+                        <li><b>X, Y:</b> Coordinates (Optional)</li>
+                    </ul>
+                </p>
+            </div>
+
         </div>
 
         <!-- KEYBOARD COMMANDS -->
@@ -144,12 +174,13 @@
             <button type="button" class="collapsible">Random Keyboard</button>
             <div class="content">
                 <p>
-                    <b>Command:</b> RANDOM KEYBOARD key lowMs highMs<br>
-                    <b>Example:</b> RANDOM KEYBOARD e 100 200<br>
+                    <b>Command:</b> RANDOMKEYBOARD key lowMs highMs<br>
+                    <b>Example:</b> RANDOMKEYBOARD e 100 200<br>
                     <b>Explanation:</b> <br> Plays a keyboard key with a random hold interval between lowMs and highMs <br>
 
                     <b>Details:</b>
                     <ul>
+                        <li><b>key:</b> The keyboard key</li>
                         <li><b>lowMs:</b> Lowest number random will pick</li>
                         <li><b>highMs:</b> Highest number random will pick</li>
                     </ul>
@@ -177,8 +208,8 @@
             <button type="button" class="collapsible">Random Wait</button>
             <div class="content">
                 <p>
-                    <b>Command:</b> RANDOM WAIT lowMs highMs<br>
-                    <b>Example:</b> RANDOM WAIT 100 250<br>
+                    <b>Command:</b> RANDOMWAIT lowMs highMs<br>
+                    <b>Example:</b> RANDOMWAIT 100 250<br>
                     <b>Explanation:</b> <br> Pauses the script for the specified time randomly between lowMs and highMs in milliseconds.<br>
 
                     <b>Details:</b>
